@@ -1,0 +1,45 @@
+.picture {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  gap: 12px;
+}
+
+.header {
+  color: #be3455;
+}
+
+.header:hover {
+  color:#F8F6F0;
+  background-color: #be3455;
+  transition: 0.4s;
+}
+
+body {
+  background-color: #F8F6F0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #212121;
+}
+
+.nav-bar {
+  width: 100%;
+  font-family: monospace;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.footer {
+  width: 80%;
+  font-family: monospace;
+  margin: auto;
+  text-align:center  
+}

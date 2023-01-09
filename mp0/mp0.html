@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./mp0.css" />
+  </head>
+  <body>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; MP0 Writeup</h1>
+      <div>
+        <h2>Overview</h2>
+        <p>I first started out by creating my repo and cloned it in VS Code. I then copied over the example site to outline the structure of my portfolio. Next,
+          I changed out all the pre-existing content to add an about me page, cheatsheets page, and MP0 writeup page. To add my custom style,
+          I changed out the default font and colors from black to pink. 
+        </p>
+        <img
+        class="skeleton-portfolio"
+        src="portfolio_landing_page.jpg"
+        />
+        <p class="gif-caption">Portfolio Landing Page</p>
+        <br />
+        <p>
+          I also added some CSS transitions for movement on the page. For additional personalization,
+          I added a footer with the course, quarter, and my name. I found that there was no way to navigate back to a previous page after clicking to a different page, so I added a "Go Back" 
+          button for navigation. After adding all these changes, here is my skeleton portfolio site:
+        </p>
+        <img
+        class="gif"
+        src="./skeleton_portfolio.gif"
+        />
+        <p class="gif-caption">Skeleton Portfolio Site</p>
+        <br />
+      </div>
+      <div>
+        <h2>Issue</h2>
+        <p>One issue I encountered when I tried cloning the repository, I had an error that restricted me from cloning in VS Code as I did not have git insalled on my computer. To resolve this error, I installed Homebrew. After installation,
+          I was able to enter "Git: Clone" and successfully clone my repo in VS Code.</p>
+        <br />
+      </div>
+      <div>
+        <h2>CSS Transition</h2>
+        <ul>
+          <li><i>Color Change</i></li>
+          <p>One CSS transition that I implemented was a <b>color change</b> of the title and title background. I chose this as it added some movement 
+            and color to the page. To make this work, I added a CSS hover component (for the CSS code, refer to 
+            <a href="./cheatsheets/cheatsheets.html" class="inline">cheatsheets</a>
+            ). On hover, the title would undergo an inverse color change from white background 
+            and pink text to pink background and white text.
+          </p>
+          <br />
+
+          <img
+          class="gif"
+          src="./css_transition_color_change.gif"
+          />
+          <p class="gif-caption">Color change on hover</p>
+
+          <li><i>Transformation Scale</i></li>
+          <p>I thought it was fun implementing the first CSS transition, so I decided to add another one to my portfolio. The second CSS transition that I implemented was a 
+            <b>transformation scale</b> on the pictures. I chose this transition as it added more movement on the page to indicate that the images could be clicked as an action.
+            To make this work, I added a CSS hover component (for the CSS code, refer to 
+            <a href="./cheatsheets/cheatsheets.html" class="inline">cheatsheets</a>
+            ). On hover, the image would shrink and decrease in brightness to 
+            indicate that the image would like a button and could be clicked to travel to a different page.
+          </p>
+          <br />
+
+          <img
+          class="gif"
+          src="./css_transition_scale.gif"
+          />
+          <p class="gif-caption">Transformation scale</p>
+        </ul>
+      </div>
+      <div>
+        <h2>Ideas & Future</h2>
+        <p>Here are some additional ideas and features I would like to add to my site in the future!</p>
+        <ul class="ideas-list">
+          <li>Implementing a repeating CSS transition (e.g. on hover, the title color changes back and forth between the white and pink instead of just once).</li>
+          <li>Adding embeded videos to display final project prototypes.</li>
+          <li>Animation on the page that automatically runs without a hover component.</li>
+          <li>Link to my socials like email or LinkedIn.</li>
+          <li>Add sound/music (maybe embed a Spotify player?)</li>
+        </ul>
+      </div>
+      <div class="nav-bar">
+        <p><a href="https://jclync.github.io/" class="inline"> &#128281; GO BACK </a></p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>
