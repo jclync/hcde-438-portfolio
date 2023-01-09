@@ -32,6 +32,15 @@ body {
   border: 0.5px inset #727272
 }
 
+.gif-caption {
+  text-align: center;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #212121;
+  margin-bottom: 2rem
+}
+
 .skeleton-portfolio {
   margin: auto;
   display: flex;
@@ -41,12 +50,35 @@ body {
   width: 900px;
 }
 
-.gif-caption {
+.picture {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 0.5px inset #727272;
+  width: 500px
+}
+
+.picture-caption {
   text-align: center;
   font-family: monospace;
   font-style: italic;
   font-size: 0.75rem;
-  color: #212121 
+  color: #212121;
+  margin-bottom: 2rem;
+}
+
+.issue-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.issue-description {
+  display: flex;
+  margin-left: 3rem;
+  width: 50%
 }
 
 .nav-bar {
