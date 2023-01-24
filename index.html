@@ -2,31 +2,35 @@
 <html>
   <head>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="right" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="active" href="..">Home</a></li>
+      </ul>
+    </nav>
     <div class="page-container">
-      <h1 class="header">welcome to Jocelyn's portfolio page! &#x263A;</h1>
-      <p>Hello! This is where I am documenting my work for HCDE 438 -- Web Technologies.</p>
+      <div class="page-text">
+      <h1 class="header">welcome to my portfolio page! &#x263A;</h1>
+      <p class="intro">Hello! This is where I am documenting my work for HCDE 438 -- Web Technologies.</p>
       <br />
+      </div>
       <h2>&#128221; projects</h2>
       <div class="picture-container">
         <div>
-          <a href="./mp0/mp0.html">
+          <a href="./projects/projects.html">
             <img
               class="picture"
-              src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Goblin_illustration_from_19th_century.jpg"
+              src="https://media4.giphy.com/media/55u2tBSfD7fCZ0ZHwT/giphy.gif?cid=6c09b952faa48cc594a80c0b73a8a78f9f77ad17c1e54351&rid=giphy.gif&ct=s"
             />
           </a>
-          <div class="image-title">MP0</div>
-        </div>
-        <div>
-          <a href="./cheatsheets/cheatsheets.html">
-            <img
-              class="picture"
-              src="https://picky-palate.com/wp-content/uploads/2010/08/BlueberryOatmealCookie2.jpg"
-            />
-          </a>
-          <div class="image-title">Cheatsheets</div>
+          <div class="image-title">projects</div>
         </div>
       </div>   
 
@@ -37,10 +41,10 @@
         <a href="./bio/bio.html">
           <img
             class="picture"
-            src="./bio/profile_pic.jpg"
+            src="https://media1.giphy.com/media/byA7UVvcIQvAppjRNY/giphy.gif?cid=6c09b952z51tx5xcvga8wus6czyupa8l9f8vzmj3v4a72wju&rid=giphy.gif&ct=s"
           />
         </a>
-      <div class="image-title">Bio</div>
+      <div class="image-title">bio</div>
         </div>
     </div>  
     <footer class="footer">
@@ -50,6 +54,7 @@
             <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
       </p>
     </footer>   
-  </div>    
+  </div>   
+  <script src="index.js" defer></script> 
   </body>
 </html>

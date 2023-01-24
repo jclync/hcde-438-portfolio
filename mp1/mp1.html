@@ -1,0 +1,194 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./mp1.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" href="..">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; MP1: Browser Extension</h1>
+      <div>
+        <h2>Overview and Usage</h2>
+        <p class="paragraph">The core functionality of this project was to write the code for a browser extension that would change the mouse cursor into an image upon a toggle switch.
+        </p>
+        <img
+        class="gif"
+        src="./images/mp1.gif"
+        />
+        <p class="gif-caption">Cursor Changer Browser Extension in Action</p>
+        <br />
+        <p class="paragraph">
+          To run this browser extension on your own device, the code can be found in this 
+          <a href="https://github.com/jclync/cursor-extension">github repository</a> called "cursor-extension". The repo can be cloned to your own device after which you can load the extension on the google extensions website.
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Development Process</h2>       
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/toggle.jpeg"
+            />
+            <p class="picture-caption">Popup with toggle</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>1. Cloned extensions repo ['Hello World' example] from class. </b><br /><br />
+              To start, I copied the code for the example extensions we had reviewed in class. 
+              I wanted my browser extension to use a popup, so I used the 'Hello World' extension example as my template. 
+              I then added a toggle to be used as a switch.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/toggle-image.jpg"
+            />
+            <p class="picture-caption">Popup with toggle and new cursor image</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>2. Add new cursor image to popup</b><br /><br />
+              I then added in an image next to the toggle to show what the new cursor would be changed to upon 
+              the toggle switch. 
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/browser-extension.jpg"
+            />
+            <p class="picture-caption">Browser extension popup with updated icon</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>3. Add new cursor image to extension icon</b><br /><br />
+              After getting the popup layout all configured, I updated the browser extension's icon from the 'Hello World' 
+              examples' to match the new cursor image.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/mp1.gif"
+            />
+            <p class="picture-caption">Cursor changing upon toggle switch</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>4. Added code for action after toggle is enabled</b><br /><br />
+              I then referenced some of the code from the 'e-nator' extension example for my 'popup.js' code since a toggle is a checkbox input 
+              (and the 'e-nator' example used a checkbox). I used this structure to write out the code for the extension to update the cursor upon toggle switch: 
+  <pre>
+    
+    <span class="code-extra">if (</span><span class="code-parameter">message</span> <span class="code-extra">==</span> <span class="code-value">true</span><span class="code-extra">) {</span> <span class="code-comment">// toggle was enabled; change cursor</span>
+      <span class="code-selector">changeCursor()</span>; <span class="code-comment">// function to change cursor to the specified image</span>
+    <span class="code-extra">} else {</span> <span class="code-comment">// toggle is not enabled; don't change cursor</span>
+      <span class="code-value">document</span>.body.<span class="code-value">style</span>.cursor <span class="code-extra">=</span> <span class="code-text">'default'</span>; <span class="code-comment">// change cursor back to default</span>
+    <span class="code-extra">}</span>
+  </pre>      
+              
+
+              <em>* note: full code is in the 
+              <a href="https://github.com/jclync/cursor-extension">repo</a></em>
+            </p> 
+          </div>
+          <br />
+        </div>
+      </div>      
+      <div>
+        <h2>Issue Deep-Dive</h2>
+        <h3>Issue #1: Misaligned toggle and image in popup</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="paragraph">One issue I encountered when I first added the icon image to the popup, the content spacing was a bit funky as the toggle and the icon image weren't aligned. 
+              To resolve this, I opened up the DevTools window using 'Inspect' and I played around with the CSS layout for the popup using 'display: flex' until it was aligned next to each other.
+              I learned that using the browser's developer tools, such as the DOM inspector, are helpful in seeing real-time changes without changing the actual file.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/toggle-image-error.jpeg"
+            />
+            <p class="picture-caption">Misaligned toggle and icon image</p>
+          </div>
+            <br />
+        </div>
+        <h3>Issue #2: Cursor did not update upon toggle switch</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="paragraph">Another issue that I encountered was when I clicked on the toggle, the cursor should have been updated to the new icon. However, the cursor
+              did not update to the image, but a 'help' cursor which meant that the image could not be found. Someone else in our class discord also had this problem where the image did not
+              change upon toggle switch. I read through the 
+              <a href = "https://developer.chrome.com/docs/extensions/mv3/content_scripts/#files">Chrome Developer docs</a> that Hannah had posted. Following the doc, I called <b>'chrome.runtime.getURL()'</b> to get the <i>absolute URL</i>
+              of the extension asset (the icon image for the new cursor) and declared the asset as a  Web Accessible Resource in my manifest.json file. 
+            </p>
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/icon-help-error.gif"
+            />
+            <p class="picture-caption">Cursor did not update correctly</p>
+          </div>
+          <br />
+        </div>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="paragraph"> Upon inspecting the popup, an invalid error message was displayed.
+              To resolve this error, I did some research online by looking up the error message "Unchecked runtime.lastError: Icon Invalid". I found a helpful article on 
+              <a href = "https://stackoverflow.com/questions/38457208/chrome-extension-error-unchecked-runtime-lasterror-while-running-browseraction">Stack Overflow</a> that explained
+              that icon images for extensions need to be specified with size in order to show. So I resized my icon image file to 32x32 px and refreshed my extension, and the cursor successfully
+              updated to the new one! I learned that inspecting the popup using the DevTools shows error messages (which are helpful to look at to see where the code has bugs), and there are many resources on Stack Overflow where people have run into the same issues as me.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/icon-invalid-error.jpeg"
+            />
+            <p class="picture-caption">Icon Invalid Error</p>
+          </div>
+            <br />
+        </div>
+      </div>
+      <div>
+        <h2>Ideas & Future Work</h2>
+        <p class="paragraph">Here are some additional ideas and features I would like to add to my browser extension in the future!
+        <ul class="ideas-list">
+          <li>Include more toggles for users to choose from more than one cursor to change.</li>
+          <li>With the choice of various cursors to change, add an element where the extension icon is also updated when the cursor is changed.</li>
+          <li>Make it so that the cursor change is visible over the current tab instead of just constrained within the popup.</li>
+        </ul>
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Kudos</h2>
+        <p class="paragraph">
+          Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)
+        <ul class="ideas-list">
+          <li><a href="https://www.w3schools.com/howto/howto_css_switch.asp">W3 Schools documentation</a> on creating toggle switch</li>
+          <li><a href = "https://github.com/ericyoondotcom/changemycursor/tree/master/mousechrome">github repo</a> from [ericyoondotcom's changemycursor] for inspo</li>
+          <li><a href="https://www.w3schools.com/jsref/prop_style_cursor.asp">W3 Schools documentation</a> on Style cursor Property</li>
+          <li><a href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/#files">Chrome Developer docs</a> on Content Script files and loading secure content</li>
+          <li><a href="https://stackoverflow.com/questions/38457208/chrome-extension-error-unchecked-runtime-lasterror-while-running-browseraction">Stack Overflow post</a> on Icon Invalid error</li>
+        </ul>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>
