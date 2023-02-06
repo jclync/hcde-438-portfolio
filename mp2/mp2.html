@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./mp2.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" href="..">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; MP2: Creative Coding Explorations</h1>
+      <div>
+        <h2>Overview and Usage</h2>
+        <p class="paragraph">The task for this project was to create a sketch gallery of six sketches using the p5.js library.
+        </p>
+        <p class="paragraph">
+          <ol>
+            <li>Sketch One: Static</li>
+            <li>Sketch Two: Random</li>
+            <li>Sketch Three: Infinite Loop</li>
+            <li>Sketch Four: Interactive</li>
+            <li>Sketch Five: Audio</li>
+            <li>Sketch Six: Audio and Visuals</li>
+          </ol>
+        </p>
+        <img
+        class="gif"
+        src="./images/gallery.gif"
+        />
+        <p class="gif-caption">Sketch Gallery</p>
+        <br />
+        <p class="paragraph">
+          The sketch gallery can be found 
+          <a href="./gallery.html">here</a> on the "Sketch Gallery [MP2: Creative Coding Explorations]" page. To view each individual sketch on it's own page, click on the sketch title.
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Development Process</h2>       
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/mp2-gettingStarted.jpg"
+            />
+            <p class="picture-caption">p5.js documentation</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>1. Read documentation. </b><br /><br />
+              To start, I read through the Getting Started documentation and References to familiarize myself with the p5.js library.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/mp2-webEditor.jpg"
+            />
+            <p class="picture-caption">p5.js Web Editor</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>2. Create sketches on Web Editor.</b><br /><br />
+              Once familiar with the p5.js library, I opened a new sketch on the Web Editor to start on the sketches for the gallery. I used the Web Editor as it has an embedded canvas so I could quickly iterate on the sketches and see changes without needing to refresh the page.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/mp2-javascript.jpg"
+            />
+            <p class="picture-caption">Sketch code copied over to new JavaScript file</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>3. Move sketches to portfolio site.</b><br /><br />
+              After I was happy with how all the sketches looked, I copied over the code for my sketches to new JavaScript files.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/mp2-liveServer.jpg"
+            />
+            <p class="picture-caption">Live Server</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>4. Sketch in Live Server</b><br /><br />
+              Once the sketch code was copied over to a new JavaScript file, I opened the file in Live Server to see how it looked on a webpage. 
+              I made slight tweaks to the dimensions of shapes and position of text based on how it looked in the Live Server page until I was happy with how everything looked.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/mp2-gallerySkeleton.jpg"
+            />
+            <p class="picture-caption">Skeleton template of gallery layout</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>5. Create Skeleton Gallery.</b><br /><br />
+              I then created a skeleton of the gallery using a grid display. To format the sketch image and sketch title layout, 
+              I copied over how I had displayed project images and project titles from my Projects page.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/gallery.jpg"
+            />
+            <p class="picture-caption">Live Server</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>6. Embed Sketches into Gallery</b><br /><br />
+              Once the grid display was set up, I embedded the sketches using the iframe HTML code:
+              <pre>
+
+    &#60;<span class="code-extra">iframe</span> <span class="code-selector">src</span> <span class="code-extra">=</span> <span class="code-text">"sketches/s1/s1.html"</span>&#62;&#60;/<span class="code-extra">iframe</span>&#62;
+              </pre>
+            </p> 
+          </div>
+          <br />
+        </div>
+      </div>      
+      <div>
+        <h2>Issue Deep-Dive</h2>
+        <h3>Issue: Low-Quality Gifs of Sketches</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="paragraph">One issue I encountered was when I first added the GIFs of the sketches, they appeared really low-quality and pixelated. I didn't like the look of this as it made 
+              it difficult to tell what was going on in the sketch. My method of adding the GIFs of the sketches was to screen record a .mov file then convert to .gif file
+              and use the &#60;a&#62; HTML tag to hyperlink with a GIF, but I found that GIFs often have low resolution compared to static images like JPGs and PNGs because the videos are compressed into video sequences.
+              <br /><br />
+              I looked up online if there was a way to display a page inside another page using HTML, and I found iframe documentation on the 
+              <a href="https://www.w3schools.com/html/html_iframe.asp">W3 Schools website</a>. I learned that iframe is used to display a web page within another web page. How this works is that
+              the &#60;iframe&#62; tag is an <em>inline frame</em>, which embeds another document within the current HTML document. I found using the iframe tag quite helpful in linking the interactive sketches as it kept
+              the resolution high and no pixelation occurred.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/s3.gif"
+            />
+            <p class="picture-caption">Pixelated and Blurry Gifs</p>
+          </div>
+            <br />
+        </div>
+      </div>
+      <div>
+        <h2>Ideas & Future Work</h2>
+        <p class="paragraph">Here are some additional ideas and features I would like to add to my gallery sketches in the future!
+        <ul class="ideas-list">
+          <li>Include a way to change the song that is played for sketch 5 (like choosing the song based on whichever keyboard key is pressed)</li>
+          <li>Change the size of the circle for the cursor pen based on speed the cursor is moving</li>
+          <li>Change the cursor pen to a more complex shape (like maybe a star or flower)</li>
+          <li>Add more notes so the keyboard player for sketch 6 so it can play more complex music besides twinkle twinkle little star</li>
+        </ul>
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Kudos</h2>
+        <p class="paragraph">
+          Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)
+        <ul class="ideas-list">
+          <li><a href="https://www.w3schools.com/html/html_iframe.asp">W3 Schools documentation</a> on iframe</li>
+          <li><a href ="https://thecodingtrain.com/">The Coding Train</a> Programming with p5.js videos</li>
+          <li><a href="https://github.com/mattdesl/workshop-p5-intro/blob/master/exercises/3-painting.md">Hard Edge Painting</a> for S2: Random inspo</li>
+          <li><a href="https://p5js.org/reference/#/libraries/p5.sound">p5.js sound library</a> documentation on amplitude, fft, oscillator, and other web audio functionality</li>
+          <li><a href="https://editor.p5js.org/branchwelder/sketches/oIGMXbJp5">play note</a> [by branchwelder] for S6: audio &#38; visuals inspo</li>
+          <li><a href="https://tone-demos.glitch.me/">tone.js demos</a> [by @mattdesl] for S5: audio inspo</li>
+        </ul>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>
