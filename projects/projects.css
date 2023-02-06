@@ -57,7 +57,7 @@ ul.topnav li a.right:hover {
 
 .picture {
   width: 300px;
-  border: 1px solid #F8F6F0;
+  border: 1px solid #dddddd;
   border-radius: 10px;
   cursor: pointer;
   object-fit: cover;
@@ -84,15 +84,15 @@ ul.topnav li a.right:hover {
 .picture-container {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  gap: 16px;
+  gap: 15px;
 }
 
 .image-title {
   text-align: center;
   font-family: monospace;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background-color: #be3455;
   color: #F8F6F0
 }
