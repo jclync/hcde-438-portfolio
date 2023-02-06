@@ -1,0 +1,141 @@
+html,
+body {
+  font-family: 'Sofia Sans', sans-serif;
+  background-color: #F8F6F0;
+  color: #212121;
+}
+
+ul.topnav a.nav-brand {
+  float: left;
+  color: #be3455;
+  font-weight: bold;
+  font-size: 2rem
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden
+}
+
+ul.topnav a {float: right;}
+
+ul.topnav a.right {float: right;}
+
+ul.topnav a.active {
+  color: #be3455;
+  font-weight:600;
+  font-weight: bold;
+  text-decoration: underline
+}
+
+ul.topnav li a {
+  display: block;
+  color: #212121;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem
+}
+
+ul.topnav li a.active:hover {
+  color: #d9627e
+  
+}
+
+ul.topnav li a.right:hover {
+  color: #535353
+}
+
+.paragraph {
+  font-family: 'Montserrat'
+}
+
+/* set original text color to pink */
+.header {
+  color: #be3455;
+}
+
+/* on hover, set text color to white and background color to pink in 0.4s */
+.header:hover {
+  color:#F8F6F0;
+  background-color: #be3455;
+  transition: 0.4s
+}
+
+.gallery-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.image-title {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.5rem;
+  background-color: #be3455;
+  color: #F8F6F0;
+  text-decoration: none;
+}
+
+.image-title:hover {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.5rem;
+  background-color: #e51e4d;
+  color: #F8F6F0;
+  text-decoration: none;
+}
+
+
+.mp0-container { 
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.picture-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+a > iframe {
+  aspect-ratio: 1;
+  border: 1px solid #212121;
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.picture {
+  width: 300px;
+  border: 1px solid #212121;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: contain;
+  aspect-ratio: 1;
+}
+
+/* shrink image on hover */
+.picture:hover {
+  filter: brightness(110%)
+}
+
+a > iframe:hover {
+  filter: brightness(110%);
+}
+
+.footer {
+  width: 80%;
+  font-family: monospace;
+  margin: auto;
+  text-align:center;
+  margin-top: 4rem
+}
+
