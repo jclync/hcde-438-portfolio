@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./mp3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" href="..">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; MP3: Dev Toolchain</h1>
+      <div>
+        <h2>Overview and Usage</h2>
+        <p class="paragraph">The core functionality of this project was to write the code to use a modern web development 
+          toolchain to structure and deploy an app, in which I chose to create a game app - Whack-A-Bee (inspired by the game whack-a-mole).
+        </p>
+        <img
+        class="gif"
+        src="./images/game.gif"
+        />
+        <p class="gif-caption">Whack-A-Bee Game</p>
+        <br />
+        <p class="paragraph">
+          Play the game 
+          <a href="https://jclync.github.io/whack-a-mole/">here</a>. The code can be found in this 
+          <a href="https://github.com/jclync/whack-a-mole">github repository</a> called "whack-a-mole". The repo can be
+           cloned to your own device -- note, you will need to install libraries, run a local development server, bundle the 
+           code, and deploy the app on your own device.
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Development Process</h2>       
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/new-repo.jpg"
+            />
+            <p class="picture-caption">New Github Repo</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>1. Create New Repo. </b><br /><br />
+              To start, I created a new public Github 
+              <a href="https://github.com/jclync/whack-a-mole">repository</a> called "whack-a-mole" to host the project.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/clone.jpg"
+            />
+            <p class="picture-caption">Clone Repo using Terminal</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>2. Clone Repo</b><br /><br />
+              I then cloned the new repo to my computer.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/p5.jpg"
+            />
+            <p class="picture-caption">Game Sketch on p5.js Web Editor</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>3. Create Game Sketch on Web Editor</b><br /><br />
+              After setting up my new repo, I opened a new sketch on the p5.js Web Editor to start on my game. 
+              I used the Web Editor as it has an embedded canvas so I could quickly iterate on my sketch and see changes 
+              without needing to refresh the page.
+              <br /><br />
+              To code the whack-a-mole game, I started basic by using rectangles to act as the 'mole'.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/local-host.jpg"
+            />
+            <p class="picture-caption">Local Dev Server for App</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>4. Set up Development Environment using Dev Toolchain Activity</b><br /><br />
+              Once I was happy with how everything worked and looked, I set up my development environment following the 
+              in-class Dev Toolchain Activity.
+              <br /><br />
+              After installing the required libraries, I bundled my code and deployed my app.
+            </p> 
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/game.gif"
+            />
+            <p class="picture-caption">Final Whack-A-Bee Game</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>5. Clean-up and Edits</b><br /><br />
+              After the game was functioning the way I wanted, I added in a Bee image to replace the rectangle shape and act as the 'mole'. I 
+              also added in audio that played when the mouse was clicked on the Bee.
+              I made some other edits and cleaned up my code as well to get to the final game app. 
+              <br /><br />
+              While making edits and changing my code, I routinely commited and pushed my code to Github alongside building 
+              and deploying my app.
+            </p> 
+          </div>
+          <br />
+        </div>
+      </div>      
+      <div>
+        <h2>Issue Deep-Dive</h2>
+        <h3>Issue: Bee Positioning and Removing Bee upon Click</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="paragraph">
+              One issue that I ran into was that the bee wouldn't disappear when it was clicked on -- but 
+              only move after 'n' seconds had passed (I had used random to set 'n' seconds for the time the bee was to be in a certain position,
+              and my mousePressed function only changed the score and lives depending on if the bee was clicked on). I 
+              also was only able to set one bee on the screen, and I wanted to have the possibility to place more than one bee on the screen at 
+              a time to increase game difficulty.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/ver1.gif"
+            />
+            <p class="picture-caption">Moles did not Disappear upon Click</p>
+          </div>
+          <br />
+        </div>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="paragraph">
+              By doing a search online, I found someone had created a <a href = "https://editor.p5js.org/hapiel/sketches/4srUmVHfj">minimalist whack-a-mole</a> on p5. 
+              Following their code, I added in a Moles Class to make the moles appear and disappear on screen. Creating a new Moles Class allowed me to bundle attributes and attribute functionality
+              for my bees in one place. More specifically, I was able to group the set of fields together (like x-Position, y-Position, size, and time duration for the bees to be on screen).
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/game.gif"
+            />
+            <p class="picture-caption">Functioning Game</p>
+          </div>
+            <br />
+        </div>
+      </div>
+      <div>
+        <h2>Ideas & Future Work</h2>
+        <p class="paragraph">Here are some additional ideas and features I would like to add to my game in the future!
+        <ul class="ideas-list">
+          <li>Increase game difficulty as time goes on (bees disappear much faster, more bees on screen, etc.)</li>
+          <li>Add more variety in the happy and sad bees</li>
+          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+        </ul>
+        </p>
+      </div>
+      <br />
+      <div>
+        <h2>Kudos</h2>
+        <p class="paragraph">
+          Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)
+        <ul class="ideas-list">
+          <li><a href="https://p5js.org/reference/">p5.js Reference Library</a> for documentation on available functions -specifically mousePressed()</li>
+          <li><a href="https://openprocessing.org/sketch/112583/">Whack Moles</a> [by Dani Grant] for whack-a-mole inspo</li>
+          <li><a href="https://editor.p5js.org/hapiel/sketches/4srUmVHfj">week 5.3 Minimalist Whack-A-Mole copy</a> [by hapiel] for whack-a-mole inspo and Moles Class</li>
+        </ul>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>
