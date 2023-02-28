@@ -161,7 +161,8 @@ pre {
   background-color: #212121;
   border-radius: 25px;
   color: #F8F6F0;
-  width: max-content
+  width: max-content;
+  font-size:x-small
 }
 
 .code-comment {
