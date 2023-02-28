@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./fp0.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" href="..">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; FP0: Final Project Proposal</h1>
+      <div class="chunk">
+        <h2>Project Description</h2>
+        <p class="paragraph">The core functionality of this project was to write the code to use a modern web development 
+          toolchain to structure and deploy an app, in which I chose to create a game app - Whack-A-Bee (inspired by the game whack-a-mole).
+        </p>
+        <img
+        class="gif"
+        src="./images/game.gif"
+        />
+        <p class="gif-caption">Whack-A-Bee Game</p>
+        <p class="paragraph">
+          Play the game 
+          <a href="https://jclync.github.io/whack-a-mole/">here</a>. The code can be found in this 
+          <a href="https://github.com/jclync/whack-a-mole">github repository</a> called "whack-a-mole". The repo can be
+           cloned to your own device -- note, you will need to install libraries, run a local development server, bundle the 
+           code, and deploy the app on your own device.
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Drawings</h2>       
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/clone.jpg"
+            />
+            <p class="picture-caption">Clone Repo using Terminal</p>
+          </div>
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/clone.jpg"
+            />
+            <p class="picture-caption">Clone Repo using Terminal</p>
+          </div>
+        </div>
+      </div>      
+      <div class="chunk">
+        <h2>Project Versions</h2>
+        <h3>Prototype Version</h3>
+        <h3>Final Version</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="issue-paragraph">
+              One issue that I ran into was that the bee wouldn't disappear when it was clicked on -- but 
+              only move after 'n' seconds had passed (I had used random to set 'n' seconds for the time the bee was to be in a certain position,
+              and my mousePressed function only changed the score and lives depending on if the bee was clicked on). I 
+              also was only able to set one bee on the screen, and I wanted to have the possibility to place more than one bee on the screen at 
+              a time to increase game difficulty.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/ver1.gif"
+            />
+            <p class="picture-caption">Moles did not Disappear upon Click</p>
+          </div>
+        </div>
+      </div>
+      <div class="chunk">
+        <h2>Development Process</h2>
+        <p class="paragraph">
+          Step-by-step plan for my development process:
+        <ol class="ideas-list">
+          <li>Increase game difficulty as time goes on (bees disappear much faster, more bees on screen, etc.)</li>
+          <li>Add more variety in the happy and sad bees</li>
+          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+        </ol>
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Unknowns</h2>
+        <p class="paragraph">
+          What I currently don't know how to do, but know I will have to figure out;;
+        <ul class="ideas-list">
+          <li>Increase game difficulty as time goes on (bees disappear much faster, more bees on screen, etc.)</li>
+          <li>Add more variety in the happy and sad bees</li>
+          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+        </ul>
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Stretch Goals</h2>
+        <p class="paragraph">
+          Things I am hoping to accomplish:
+        <ul class="ideas-list">
+          <li> for documentation on available functions -specifically mousePressed()</li>
+          <li>[by Dani Grant] for whack-a-mole inspo</li>
+          <li>   [by hapiel] for whack-a-mole inspo and Moles Class</li>
+        </ul>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>
