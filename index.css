@@ -107,6 +107,17 @@ ul.topnav li a.right:hover {
   margin-top: 5rem
 }
 
+.chunk-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chunk-box {
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
 .footer {
   width: 80%;
   font-family: monospace;
