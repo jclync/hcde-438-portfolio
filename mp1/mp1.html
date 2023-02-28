@@ -91,10 +91,10 @@
               (and the 'e-nator' example used a checkbox). I used this structure to write out the code for the extension to update the cursor upon toggle switch: 
   <pre>
     
-  <span class="code-extra">if (</span><span class="code-parameter">message</span> <span class="code-extra">==</span> <span class="code-value">true</span><span class="code-extra">) {</span> <span class="code-comment">// toggle was enabled; change cursor</span>
-    <span class="code-selector">changeCursor()</span>; <span class="code-comment">// function to change cursor to the specified image</span>
-  <span class="code-extra">} else {</span> <span class="code-comment">// toggle is not enabled; don't change cursor</span>
-    <span class="code-value">document</span>.body.<span class="code-value">style</span>.cursor <span class="code-extra">=</span> <span class="code-text">'default'</span>; <span class="code-comment">// change cursor back to default </span>
+  <span class="code-extra">if (</span><span class="code-parameter">message</span> <span class="code-extra">==</span> <span class="code-value">true</span><span class="code-extra">) {</span> <span class="code-comment">// toggle enabled; change cursor</span>
+    <span class="code-selector">changeCursor()</span>; <span class="code-comment">// function to change cursor</span>
+  <span class="code-extra">} else {</span> <span class="code-comment">// toggle not enabled; don't change cursor</span>
+    <span class="code-value">document</span>.body.<span class="code-value">style</span>.cursor <span class="code-extra">=</span> <span class="code-text">'default'</span>; <span class="code-comment">// cursor back to default </span>
   <span class="code-extra">}</span>
   </pre>      
               
