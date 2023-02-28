@@ -48,6 +48,10 @@ ul.topnav li a.right:hover {
   color: #535353
 }
 
+.chunk {
+  margin-top: 3rem;
+}
+
 .paragraph {
   font-family: 'Montserrat'
 }
@@ -76,7 +80,8 @@ ul.topnav li a.right:hover {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  border: 0.5px inset #727272
+  border: 0.5px inset #727272;
+  max-width: 80vw;
 }
 
 .gif-caption {
@@ -88,15 +93,6 @@ ul.topnav li a.right:hover {
   margin-bottom: 2rem
 }
 
-.gif {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.5px inset #727272;
-  width: 900px;
-}
-
 .picture {
   margin: auto;
   display: flex;
@@ -104,7 +100,8 @@ ul.topnav li a.right:hover {
   align-items: center;
   border-radius: 25px;
   border: 0.5px inset #727272;
-  width: 500px
+  width: 400px;
+  max-width: 80vw; 
 }
 
 .picture-caption {
@@ -119,11 +116,14 @@ ul.topnav li a.right:hover {
 .issue-container {
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
+}
+
+.issue-picture-container {
+  margin: auto;
+  width: 50%;
 }
 
 .issue-description {
-  display: flex;
   margin-left: 3rem;
   width: 50%
 }

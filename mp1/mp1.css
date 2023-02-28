@@ -48,6 +48,10 @@ ul.topnav li a.right:hover {
   color: #535353
 }
 
+.chunk {
+  margin-top: 3rem;
+}
+
 .paragraph {
   font-family: 'Montserrat'
 }
@@ -76,7 +80,8 @@ ul.topnav li a.right:hover {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  border: 0.5px inset #727272
+  border: 0.5px inset #727272;
+  width: 500px;
 }
 
 .gif-caption {
@@ -88,15 +93,6 @@ ul.topnav li a.right:hover {
   margin-bottom: 2rem
 }
 
-.gif {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.5px inset #727272;
-  width: 500px;
-}
-
 .picture {
   margin: auto;
   display: flex;
@@ -104,7 +100,7 @@ ul.topnav li a.right:hover {
   align-items: center;
   border-radius: 25px;
   border: 0.5px inset #727272;
-  width: 500px;
+  width: 400px;
   height: auto;
 }
 
@@ -120,7 +116,8 @@ ul.topnav li a.right:hover {
 .issue-container {
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
 }
 
 .issue-picture-container {
@@ -132,16 +129,22 @@ ul.topnav li a.right:hover {
   width: 50%
 }
 
+.issue-paragraph {
+  font-family: 'Montserrat';
+  margin: unset
+}
+
 .section-container {
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  justify-content: space-between;
 }
 
 .section-description {
-
-  width: 50%;
-  margin-left: 3rem
+  margin-left: 3rem;
+  margin-bottom: 3rem;
 }
 
 .footer {
@@ -153,13 +156,12 @@ ul.topnav li a.right:hover {
 }
 
 pre {
-  width: 80%;
   margin: auto;
   font-family: monospace;
   background-color: #212121;
   border-radius: 25px;
   color: #F8F6F0;
-  width: 110%
+  width: max-content
 }
 
 .code-comment {

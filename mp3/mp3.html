@@ -14,7 +14,7 @@
     </nav>
     <div class="mp0-container">
       <h1 class="header">&#9997; MP3: Dev Toolchain</h1>
-      <div>
+      <div class="chunk">
         <h2>Overview and Usage</h2>
         <p class="paragraph">The core functionality of this project was to write the code to use a modern web development 
           toolchain to structure and deploy an app, in which I chose to create a game app - Whack-A-Bee (inspired by the game whack-a-mole).
@@ -24,7 +24,6 @@
         src="./images/game.gif"
         />
         <p class="gif-caption">Whack-A-Bee Game</p>
-        <br />
         <p class="paragraph">
           Play the game 
           <a href="https://jclync.github.io/whack-a-mole/">here</a>. The code can be found in this 
@@ -33,8 +32,7 @@
            code, and deploy the app on your own device.
         </p>
       </div>
-      <br />
-      <div>
+      <div class="chunk">
         <h2>Development Process</h2>       
         <div class="section-container">
           <div class="section-picture-container">
@@ -50,6 +48,8 @@
               <a href="https://github.com/jclync/whack-a-mole">repository</a> called "whack-a-mole" to host the project.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -62,6 +62,8 @@
               I then cloned the new repo to my computer.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -78,6 +80,8 @@
               To code the whack-a-mole game, I started basic by using rectangles to act as the 'mole'.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -93,6 +97,8 @@
               After installing the required libraries, I bundled my code and deployed my app.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -110,15 +116,14 @@
               and deploying my app.
             </p> 
           </div>
-          <br />
         </div>
       </div>      
-      <div>
+      <div class="chunk">
         <h2>Issue Deep-Dive</h2>
         <h3>Issue: Bee Positioning and Removing Bee upon Click</h3>
         <div class="issue-container">
           <div class="issue-description">
-            <p class="paragraph">
+            <p class="issue-paragraph">
               One issue that I ran into was that the bee wouldn't disappear when it was clicked on -- but 
               only move after 'n' seconds had passed (I had used random to set 'n' seconds for the time the bee was to be in a certain position,
               and my mousePressed function only changed the score and lives depending on if the bee was clicked on). I 
@@ -133,11 +138,10 @@
             />
             <p class="picture-caption">Moles did not Disappear upon Click</p>
           </div>
-          <br />
         </div>
         <div class="issue-container">
           <div class="issue-description">
-            <p class="paragraph">
+            <p class="issue-paragraph">
               By doing a search online, I found someone had created a <a href = "https://editor.p5js.org/hapiel/sketches/4srUmVHfj">minimalist whack-a-mole</a> on p5. 
               Following their code, I added in a Moles Class to make the moles appear and disappear on screen. Creating a new Moles Class allowed me to bundle attributes and attribute functionality
               for my bees in one place. More specifically, I was able to group the set of fields together (like x-Position, y-Position, size, and time duration for the bees to be on screen).
@@ -150,10 +154,9 @@
             />
             <p class="picture-caption">Functioning Game</p>
           </div>
-            <br />
         </div>
       </div>
-      <div>
+      <div class="chunk">
         <h2>Ideas & Future Work</h2>
         <p class="paragraph">Here are some additional ideas and features I would like to add to my game in the future!
         <ul class="ideas-list">
@@ -163,8 +166,7 @@
         </ul>
         </p>
       </div>
-      <br />
-      <div>
+      <div class="chunk">
         <h2>Kudos</h2>
         <p class="paragraph">
           Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)

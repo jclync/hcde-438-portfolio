@@ -14,7 +14,7 @@
     </nav>
     <div class="mp0-container">
       <h1 class="header">&#9997; MP2: Creative Coding Explorations</h1>
-      <div>
+      <div class="chunk">
         <h2>Overview and Usage</h2>
         <p class="paragraph">The task for this project was to create a sketch gallery of six sketches using the p5.js library.
         </p>
@@ -39,8 +39,7 @@
           <a href="./gallery.html">here</a> on the "Sketch Gallery [MP2: Creative Coding Explorations]" page. To view each individual sketch on it's own page, click on the sketch title.
         </p>
       </div>
-      <br />
-      <div>
+      <div class="chunk">
         <h2>Development Process</h2>       
         <div class="section-container">
           <div class="section-picture-container">
@@ -55,6 +54,8 @@
               To start, I read through the Getting Started documentation and References to familiarize myself with the p5.js library.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -67,6 +68,8 @@
               Once familiar with the p5.js library, I opened a new sketch on the Web Editor to start on the sketches for the gallery. I used the Web Editor as it has an embedded canvas so I could quickly iterate on the sketches and see changes without needing to refresh the page.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -79,6 +82,8 @@
               After I was happy with how all the sketches looked, I copied over the code for my sketches to new JavaScript files.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -92,6 +97,8 @@
               I made slight tweaks to the dimensions of shapes and position of text based on how it looked in the Live Server page until I was happy with how everything looked.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -105,6 +112,8 @@
               I copied over how I had displayed project images and project titles from my Projects page.
             </p> 
           </div>
+        </div>
+        <div class="section-container">
           <div class="section-picture-container">
             <img
             class="picture"
@@ -117,19 +126,18 @@
               Once the grid display was set up, I embedded the sketches using the iframe HTML code:
               <pre>
 
-    &#60;<span class="code-extra">iframe</span> <span class="code-selector">src</span> <span class="code-extra">=</span> <span class="code-text">"sketches/s1/s1.html"</span>&#62;&#60;/<span class="code-extra">iframe</span>&#62;
+  &#60;<span class="code-extra">iframe</span> <span class="code-selector">src</span> <span class="code-extra">=</span> <span class="code-text">"sketches/s1/s1.html"</span>&#62;&#60;/<span class="code-extra">iframe</span>&#62; 
               </pre>
             </p> 
           </div>
-          <br />
         </div>
       </div>      
-      <div>
+      <div class="chunk">
         <h2>Issue Deep-Dive</h2>
         <h3>Issue: Low-Quality Gifs of Sketches</h3>
         <div class="issue-container">
           <div class="issue-description">
-            <p class="paragraph">One issue I encountered was when I first added the GIFs of the sketches, they appeared really low-quality and pixelated. I didn't like the look of this as it made 
+            <p class="issue-paragraph">One issue I encountered was when I first added the GIFs of the sketches, they appeared really low-quality and pixelated. I didn't like the look of this as it made 
               it difficult to tell what was going on in the sketch. My method of adding the GIFs of the sketches was to screen record a .mov file then convert to .gif file
               and use the &#60;a&#62; HTML tag to hyperlink with a GIF, but I found that GIFs often have low resolution compared to static images like JPGs and PNGs because the videos are compressed into video sequences.
               <br /><br />
@@ -146,10 +154,9 @@
             />
             <p class="picture-caption">Pixelated and Blurry Gifs</p>
           </div>
-            <br />
         </div>
       </div>
-      <div>
+      <div class="chunk">
         <h2>Ideas & Future Work</h2>
         <p class="paragraph">Here are some additional ideas and features I would like to add to my gallery sketches in the future!
         <ul class="ideas-list">
@@ -160,8 +167,7 @@
         </ul>
         </p>
       </div>
-      <br />
-      <div>
+      <div class="chunk">
         <h2>Kudos</h2>
         <p class="paragraph">
           Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)
