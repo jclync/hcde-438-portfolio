@@ -113,6 +113,7 @@ ul.topnav li a.right:hover {
   border: 0.5px inset #727272;
   max-width: 35vw;
   height: auto;
+  width: 500px;
 }
 
 .picture-container {
