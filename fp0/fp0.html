@@ -16,72 +16,70 @@
       <h1 class="header">&#9997; FP0: Final Project Proposal</h1>
       <div class="chunk">
         <h2>Project Description</h2>
-        <p class="paragraph">The core functionality of this project was to write the code to use a modern web development 
-          toolchain to structure and deploy an app, in which I chose to create a game app - Whack-A-Bee (inspired by the game whack-a-mole).
+        <p class="paragraph">This project will be to create a cookie run game where user uses arrow keys to jump to avoid obstacles
+          (like endless runner/ google dino no internet game) with a login feature to track high scores.
         </p>
         <img
         class="gif"
-        src="./images/game.gif"
+        src="./images/cookieRun.png"
         />
-        <p class="gif-caption">Whack-A-Bee Game</p>
-        <p class="paragraph">
-          Play the game 
-          <a href="https://jclync.github.io/whack-a-mole/">here</a>. The code can be found in this 
-          <a href="https://github.com/jclync/whack-a-mole">github repository</a> called "whack-a-mole". The repo can be
-           cloned to your own device -- note, you will need to install libraries, run a local development server, bundle the 
-           code, and deploy the app on your own device.
-        </p>
+        <p class="gif-caption">Cookie Run Game</p>
       </div>
       <div class="chunk">
         <h2>Drawings</h2>       
-        <div class="section-container">
-          <div class="section-picture-container">
-            <img
-            class="picture"
-            src="./images/clone.jpg"
-            />
-            <p class="picture-caption">Clone Repo using Terminal</p>
-          </div>
-          <div class="section-picture-container">
-            <img
-            class="picture"
-            src="./images/clone.jpg"
-            />
-            <p class="picture-caption">Clone Repo using Terminal</p>
-          </div>
+        <div class="drawings-container">
+          <div class="picture-container">
+            <div>
+              <img
+              class="pic"
+              src="./images/playGame.JPG"
+              />
+              <div class="picture-caption">
+                Play Game Screen
+              </div>
+            </div>
+          </div> 
+          <div class="picture-container">
+            <div>
+              <img
+              class="pic"
+              src="./images/gameOver.JPG"
+              />
+              <div class="picture-caption">
+                Game Over Screen
+              </div>
+            </div>
+          </div> 
         </div>
       </div>      
       <div class="chunk">
         <h2>Project Versions</h2>
         <h3>Prototype Version</h3>
+        <ul>
+          <li>Tackle firebase early (like the in-class example, but track score instead of track messages)</li>
+        </ul>
+        <br />
         <h3>Final Version</h3>
-        <div class="issue-container">
-          <div class="issue-description">
-            <p class="issue-paragraph">
-              One issue that I ran into was that the bee wouldn't disappear when it was clicked on -- but 
-              only move after 'n' seconds had passed (I had used random to set 'n' seconds for the time the bee was to be in a certain position,
-              and my mousePressed function only changed the score and lives depending on if the bee was clicked on). I 
-              also was only able to set one bee on the screen, and I wanted to have the possibility to place more than one bee on the screen at 
-              a time to increase game difficulty.
-            </p> 
-          </div>
-          <div class="issue-picture-container">
-            <img
-            class="picture"
-            src="./images/ver1.gif"
-            />
-            <p class="picture-caption">Moles did not Disappear upon Click</p>
-          </div>
-        </div>
+        <ul>
+          <li>Implement endless runner game component; add in colors and actual game character + obstacles/candy while tracking high score with login</li>
+        </ul>
       </div>
       <div class="chunk">
         <h2>Development Process</h2>
         <p class="paragraph">
           Step-by-step plan for my development process:
         <ol class="ideas-list">
-          <li>Increase game difficulty as time goes on (bees disappear much faster, more bees on screen, etc.)</li>
-          <li>Add more variety in the happy and sad bees</li>
-          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+          <li>Create new repo for prototype version</li>
+          <li>Clone to my computer</li>
+          <li>Start coding prototype versions 
+            <br /> a. Tackle firebase login first; once this is working, implement game
+          </li>
+          <li><em>Milestone 1 (prototype version)</em></li>
+          <li>Make revisions 
+            <br /> a. Use shapes for character and obstacles (infinite runner)
+            <br /> b. Make the interface look nicer (colors, game character, obstacles, candy, etc.)
+          </li>
+          <li><em>Milestone 2 (final version)</em></li>
         </ol>
         </p>
       </div>
@@ -90,9 +88,8 @@
         <p class="paragraph">
           What I currently don't know how to do, but know I will have to figure out;;
         <ul class="ideas-list">
-          <li>Increase game difficulty as time goes on (bees disappear much faster, more bees on screen, etc.)</li>
-          <li>Add more variety in the happy and sad bees</li>
-          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+          <li>Firebase for login</li>
+          <li>Using p5.play for objects and collisions (for MP3 I had used p5)</li>
         </ul>
         </p>
       </div>
@@ -101,9 +98,10 @@
         <p class="paragraph">
           Things I am hoping to accomplish:
         <ul class="ideas-list">
-          <li> for documentation on available functions -specifically mousePressed()</li>
-          <li>[by Dani Grant] for whack-a-mole inspo</li>
-          <li>   [by hapiel] for whack-a-mole inspo and Moles Class</li>
+          <li>Allow user to store their high score using the login feature with firebase</li>
+          <li>Increase game difficulty as time passes (while time is over n seconds, the obstacles appear more frequently)</li>
+          <li>Allow user to change game character</li>
+          <li>Add sound to the game</li>
         </ul>
         </p>
       </div>

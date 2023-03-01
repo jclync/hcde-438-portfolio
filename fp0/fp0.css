@@ -104,6 +104,31 @@ ul.topnav li a.right:hover {
   height: auto;
 }
 
+.pic {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 0.5px inset #727272;
+  max-width: 35vw;
+  height: auto;
+}
+
+.picture-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.drawings-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
 .picture-caption {
   text-align: center;
   font-family: monospace;
