@@ -1,0 +1,243 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./fp1.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" href="..">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; FP1: Final Project Prototype</h1>
+      <div class="chunk">
+        <h2>Overview and Usage</h2>
+        <p class="paragraph">The core functionality of this project was to create the prototype for my final project. Since I really enjoyed creating a game for MP3, 
+          I chose to create a new game: Boba Run (similar to Cookie Run and Google's dino run game).
+        </p>
+        <img
+        class="gif"
+        src="./images/cookie-run-game.gif"
+        />
+        <p class="gif-caption">Boba Run Game Prototype</p>
+        <p class="paragraph">
+          Play the game 
+          <a href="https://jclync.github.io/cookie-run-prototype/">here</a>. The code can be found in this 
+          <a href="https://github.com/jclync/cookie-run-prototype">github repository</a> called "cookie-run-prototype". The repo can be
+           cloned to your own device -- note, you will need to install libraries, run a local development server, bundle the 
+           code, and deploy the app on your own device.
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Development Process</h2>       
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/new-repo.jpg"
+            />
+            <p class="picture-caption">New Github Repo</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>1. Create New Repo. </b><br /><br />
+              To start, I created a new public Github 
+              <a href="https://github.com/jclync/cookie-run-prototype">repository</a> called "cookie-run-prototype" to host the project. Then, I cloned the new repo to my computer using the terminal.
+            </p> 
+          </div>
+        </div>
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/firebase-setup.jpg"
+            />
+            <p class="picture-caption">Firebase Setup</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>2. Setup Firebase. </b><br /><br />
+              After my new repo was created and cloned, I setup firebase as I would hopefully be using this to store user high scores for my game.
+            </p> 
+          </div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/firebase-auth.jpg"
+            />
+            <p class="picture-caption">Firebase Dev Server</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>3. Setup Dev Server. </b><br /><br />
+              Once my firebase project was setup, I added Cloud Firestore database to my project (to store information in the database). Then, 
+              to make sure it was working, I opened up the dev server.
+            </p> 
+          </div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/firebase-auth.jpg"
+            />
+            <p class="picture-caption">Firebase Auth</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>4. Setup Firebase Auth. </b><br /><br />
+              Something that I wanted to implement was allow users to login with their Google accounts (or also play and store their scores anonymously), so I had to implement Auth.
+            </p> 
+          </div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/firebase-auth-working.jpg"
+            />
+            <p class="picture-caption">Firebase Auth Working Successfully!</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>5. Firebase Auth in Local Server. </b><br /><br />
+              To make sure the authentication was working successfully, I opened my local server to check, and it did!
+            </p> 
+          </div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/web-editor.jpg"
+            />
+            <p class="picture-caption">Game Sketch on p5.js Web Editor</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>6. Create Game Sketch on Web Editor. </b><br /><br />
+              Since my firebase authentication and database was working, I then moved on to coding my game. To do this, I opened a new sketch on the p5.js Web Editor to start on my game. 
+              I used the Web Editor as it has an embedded canvas so I could quickly iterate on my sketch and see changes 
+              without needing to refresh the page.
+              <br /><br />
+              To code my cookie-run game, I started basic by using sprites to act as the 'game player' and 'obstacles'.
+            </p> 
+          </div>
+        </div>
+        
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/game-in-local-dev-server.jpg"
+            />
+            <p class="picture-caption">Game in Local Dev Server</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>7. Open Game in Local Dev Server. </b><br /><br />
+              Once I was happy with how my game looked and worked, I moved my code over to my repo folder and ran my game site using the local server.
+            </p> 
+          </div>
+        </div>
+      </div>      
+      <div class="chunk">
+        <h2>Issue Deep-Dive</h2>
+        <h3>Issue: Layout and Centering</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="issue-paragraph">
+              One issue that I ran into was that I wanted my game screen to be centered on the page, but it was only stuck to the top left corner of the page.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/issue-centering.jpg"
+            />
+            <p class="picture-caption">Game Screen was not centered on page</p>
+          </div>
+        </div>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="issue-paragraph">
+              By doing a search online, I found flexbox is a good way to center body content on a page using css.
+            </p>             
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/game-in-local-dev-server.jpg"
+            />
+            <p class="picture-caption">Functioning Game with Game Screen in Center</p>
+          </div>
+        </div>
+      </div>
+      <div class="chunk">
+        <h2>Project Scope</h2>
+        <p class="paragraph">
+          Now that I have completed my prototype, I feel like my project scope may need to be narrowed down as I do not 
+          know if I have enough time to successfully implement Firebase within the time frame of the rest of the quarter. 
+          Although I had set up Firebase, I have not yet linked my game to Firebase, so I am not sure if I can accomplish this 
+          task by the time the final is due - firebase to store high scores and user authentication may be one feature I need to 
+          remove from my anticipated final project due to timing constraints. However, I may be able to add additional 
+          features of increasing game difficulty, changing game characters, and adding background music to enhance the 
+          experience of my game.
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Time Management</h2>
+        <p class="paragraph">
+          The amount of time I spent building my prototype was much more than my initial plan. 
+          This is because I spent a lot of my time figuring out how Firebase worked (this was one anticipated roadblock as I had to read through their 
+          documentation and look through the in-class activity again). Additionally, since I did not use the p5.play library for MP3,
+          I had to look through their documentation to understand how to use sprites for my game.
+          <br />
+          One unanticipated roadblock was the complicity involved in using vite as a build tool versus what we had used with rollup for MP3. 
+          I tried out using vite at first, but found rollup to be easier to work with as I had used it previously for MP3. 
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Implementation Plan</h2>
+        <p class="paragraph">
+          For my final version, I feel like I am slightly simplifying my implementation plan for my game now that I have completed
+          my prototype. For my implementation plan for the final version, I plan to shift away from Firebase and focus more on implementing game features from my stretch goals 
+          (increasing level difficulty, adding sound, new characters, etc.). Given the time left until the final version is due, if I have time I will attempt to make Firebase work to score users' high scores.
+          This has changed because I want to manage my time effectively to ensure I make something I am happy with as well as ensure
+          I can make something within my coding capabilities.
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Ideas & Future Work</h2>
+        <p class="paragraph">Here are some additional ideas and features I would like to add to my game in the future!
+        <ul class="ideas-list">
+          <li>Get firebase implemented to effectively allow users to login and store their high scores</li>
+          <li>Add more variety in the game characters</li>
+          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+        </ul>
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Kudos</h2>
+        <p class="paragraph">
+          Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)
+        <ul class="ideas-list">
+          <li><a href="https://www.youtube.com/watch?v=FHXDywq69v4">Endless Runner Game Tutorial</a> [by byteCode]</li>
+          <li><a href="https://stackoverflow.com/questions/16675139/restarting-millis-in-processing-error#:~:text=millis()%20can't%20really,time%20since%20the%20program%20starts">StackOverflow post on how millis() works</a></li>
+          <li><a href="https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center">StackOverflow post on flexbox for centering body</a></li>
+        </ul>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>
