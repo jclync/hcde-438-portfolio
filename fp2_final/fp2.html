@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./fp2.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Sofia+Sans:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="topnav">
+        <li ><a class="nav-brand" title="home" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" title="about me" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" title="projects" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" title="home" href="..">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mp0-container">
+      <h1 class="header">&#9997; FP2: Final Project -- Final Ver.</h1>
+      <div class="chunk">
+        <h2>Overview and Usage</h2>
+        <p class="paragraph">The core functionality of this project was to create the final version for my final project. Since I really enjoyed creating a game for MP3, 
+          I chose to create a new game: Boba Run (similar to Cookie Run and Google's dino run game pictured below).
+        </p>
+        <div class="picture-container">
+          <div>
+            <img
+            class="gif"
+            src="./images/cookie-run.png"
+            alt="cookie run game"
+            />
+            <p class="gif-caption">Cookie Run Game</p>
+          </div>
+          <div>
+            <img
+            class="gif"
+            src="./images/google-dino.png"
+            alt="google's dino run game"
+            />
+            <p class="gif-caption">Google's Dino Run Game</p>
+          </div>
+        </div>
+        <img
+        class="gif"
+        src="./images/game-final.gif"
+        />
+        <p class="gif-caption">Boba Run Game</p>
+        <p class="paragraph">
+          Play the game 
+          <a title="boba run game" href="https://jclync.github.io/boba-run/">here</a>. The code can be found in this 
+          <a title="boba run github repo" href="https://github.com/jclync/boba-run">github repository</a> called "boba-run". The repo can be
+           cloned to your own device -- note, you will need to install libraries, run a local development server, bundle the 
+           code, and deploy the app on your own device.
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Development Process</h2>       
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/new-repo.png"
+            alt="new github repo"
+            />
+            <p class="picture-caption">New Github Repo</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>1. Create New Repo. </b><br /><br />
+              To start, I created a new public Github 
+              <a title="boba run game github repo" href="https://github.com/jclync/boba-run">repository</a> called "boba-run" to host the project. Then, I cloned the new repo to my computer using the terminal.
+            </p> 
+          </div>
+        </div>
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/copy-prototype.png"
+            alt="code copied over from FP1"
+            />
+            <p class="picture-caption">Code copied from FP1</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>2. Copy over code from FP1. </b><br /><br />
+              Once the repo was cloned, I copied over my code from my FP1 prototype into my new repo.
+            </p> 
+          </div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/web-editor.png"
+            alt="game sketch in p5.js web editor"
+            />
+            <p class="picture-caption">Game Sketch in p5.js Web Editor</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>3. Edit Game Sketch in p5 Web Editor. </b><br /><br />
+              I then went back to the p5 Web Editor to make edits to my game based on feedback from the class demo. 
+              <br /><br />
+              Here are some of the implementations I made to add to my prototype version:
+              <ul>
+                <li>added background game music</li>
+                <li>added a way to let users change game characters</li>
+                <li>added a ceiling to prevent the character sprite from jumping off screen</li>
+                <li>added collectable boba (like coins in PacMan) to add to the game score</li>
+                <li>added animation to the character sprites to make them non-static</li>
+              </ul>
+            </p> 
+          </div>
+        </div>
+        
+        <div class="section-container">
+          <div class="section-picture-container">
+            <img
+            class="picture"
+            src="./images/final-game.png"
+            alt="game final version"
+            />
+            <p class="picture-caption">Game Final Ver</p>
+          </div>
+          <div class="section-description">
+            <p class="paragraph"><b>4. Build and Deploy Game. </b><br /><br />
+              Once I was happy with how my game looked and worked, I moved my code over to my repo folder and built and deployed my site using the dev toolchain.
+            </p> 
+          </div>
+        </div>
+      </div>      
+      <div class="chunk">
+        <h2>Issue Deep-Dive</h2>
+        <h3>Issue: Sprite Animation</h3>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="issue-paragraph">
+              One issue that I ran into was that I wanted animate my game sprites as they were showing only as static images in the game. 
+              I had set the sprite image to a url path to a gif image file. In the p5 web editor, they were animated, but once my game was deployed, the sprites were static.
+            </p> 
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/issue-static-sprite.gif"
+            alt="static sprite"
+            />
+            <p class="picture-caption">Static Sprite :&#40;</p>
+          </div>
+        </div>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="issue-paragraph">
+              By doing a search online, I found a github issues page that explained why gifs do not show as animated. 
+              This has something to do with the frame rate that the canvas is drawn, which makes animated gif files 
+              only display as static images that do not move.
+              <br /><br />
+              A workaround around this issue was to use the 
+              <a title="p5.play sprite animation documentation" href="https://p5play.org/learn/sprite_animation.html">sprite animation</a> function, specifically the 
+              <b>Sprite Sheets with Multiple Animations</b> page. I took each frame from my gif file and positioned them 
+              next to each other in a single image to create a sprite sheet (pictured). I then uploaded the sprite sheet into the web 
+              editor to see the animation changes in real time. Once loaded, I used the <b>addAnis</b> function to encode 
+              animation names as keys and sprite sheet atlases as values. 
+            </p>             
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/spriteSheet1.png"
+            alt="sprite sheet"
+            />
+            <p class="picture-caption">Sprite Sheet</p>
+          </div>
+        </div>
+        <div class="issue-container">
+          <div class="issue-description">
+            <p class="issue-paragraph">
+              At first, I had a bit of difficulty getting the proportions and spacings of the sprites in the sprite sheet 
+              to make the animations show smoothly without being cut off as I was unfamiliar with the animation function.
+              The documentation mentioned using same-size frames for the animation and putting them in order from left to right.
+              Once I did this, my character sprite animations turned out perfectly without me needing to manually specify the 
+              position of every consequent frame.
+            </p>             
+          </div>
+          <div class="issue-picture-container">
+            <img
+            class="picture"
+            src="./images/boba-run-game.gif"
+            alt="functioning game with animated character sprite"
+            />
+            <p class="picture-caption">Functioning Game with Animated Character Sprites</p>
+          </div>
+        </div>
+      </div>
+      <div class="chunk">
+        <h2>Ideas & Future Work</h2>
+        <p class="paragraph">From my project proposal, I was able to accomplish some of my stretch goals including:
+        <ul class="ideas-list">
+          <li>Implementing background music for the game</li>
+          <li>Allow users to change game characters</li>
+          <li>Increase game difficulty as time passes (as the duration of the game increases, the speed of the obstacles subsequently increase as well)</li>
+        </ul>
+        </p>
+        <p class="paragraph">
+          An unanticipated setback was the amount of time I used to implement the sprites (specifically getting the animations to work). Due to 
+          time constraints, I was unable to accomplish getting Firebase implemented to keep track of user high scores for my game. 
+          This is something I would like to continue to work on if I were to have more time working on my project.
+        </p>
+        <br />
+        <p class="paragraph">Here are some additional ideas and features I would like to add to my game in the future!
+        <ul class="ideas-list">
+          <li>Get firebase implemented to effectively allow users to login and store their high scores</li>
+          <li>Add more variety in the game characters 
+            <br />&emsp;<i>Right now, I only have 2 so it would be fun to add a whole library of characters to pick from.</i>
+          </li>
+          <li>Have a way to for users to choose the game difficulty through pressing a key on the keyboard</li>
+          <li>Implement a way for the game to work on mobile devices through tap mechanism</li>
+          <li>Allow users to mute/unmute the background music 
+            <br />&emsp;<i>The sound is currently defaulted to autoplay, so I tried out my game in different browsers and it
+              worked in Safari, but not Chrome. 
+            <br />&emsp;There's a
+            <a title="chrome autoplay policy" href="https://developer.chrome.com/blog/autoplay/#webaudio">Chrome autoplay policy</a>, which prevents the music from 
+            playing until the user has interacted with the domain.</i>
+          </li>
+        </ul>
+        </p>
+      </div>
+      <div class="chunk">
+        <h2>Kudos</h2>
+        <p class="paragraph">
+          Kudos to these helpful online resources! And special thanks to Hannah, Raina, and other peers as well :&#41;
+        <ul class="ideas-list">
+          <li><a title="endless runner game tutorial" href="https://www.youtube.com/watch?v=FHXDywq69v4">Endless Runner Game Tutorial</a> [by byteCode] for FP1</li>
+          <li><a title="stackoverflow post on millis" href="https://stackoverflow.com/questions/16675139/restarting-millis-in-processing-error#:~:text=millis()%20can't%20really,time%20since%20the%20program%20starts">StackOverflow post </a>on how millis() works for FP1</li>
+          <li><a title="stackoverflow post on flexbox and layout" href="https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center">StackOverflow post </a>on flexbox for centering body for FP1</li>
+          <li><a title="github issues page on gifs and sprite animation" href="https://github.com/processing/p5.js/issues/3380">Github Issues Page</a> on gifs and animations in p5</li>
+          <li><a title="p5.play documentation" href="https://p5play.org/learn/sprite_animation.html?page=4">p5.play documentation</a> on Sprites and Sprite Animations</li>
+        </ul>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
+          University of Washington<br />
+          <a title="jocelyn's portfolio" href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+        </p>
+      </footer>         
+    </div>
+  </body>
+</html>

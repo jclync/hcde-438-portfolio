@@ -1,0 +1,219 @@
+html,
+body {
+  font-family: 'Sofia Sans', sans-serif;
+  background-color: #F8F6F0;
+  color: #212121;
+}
+
+ul.topnav a.nav-brand {
+  float: left;
+  color: #be3455;
+  font-weight: bold;
+  font-size: 2rem
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden
+}
+
+ul.topnav a {float: right;}
+
+ul.topnav a.right {float: right;}
+
+ul.topnav a.active {
+  color: #be3455;
+  font-weight:600;
+  font-weight: bold;
+  text-decoration: underline
+}
+
+ul.topnav li a {
+  display: block;
+  color: #212121;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem
+}
+
+ul.topnav li a.active:hover {
+  color: #d9627e
+  
+}
+
+ul.topnav li a.right:hover {
+  color: #535353
+}
+
+.chunk {
+  margin-top: 3rem;
+}
+
+.paragraph {
+  font-family: 'Montserrat'
+}
+
+/* set original text color to pink */
+.header {
+  color: #be3455;
+}
+
+/* on hover, set text color to white and background color to pink in 0.4s */
+.header:hover {
+  color:#F8F6F0;
+  background-color: #be3455;
+  transition: 0.4s
+}
+
+.mp0-container { 
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.gif {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 0.5px inset #727272;
+  width: 500px;
+}
+
+.gif-caption {
+  text-align: center;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #212121;
+  margin-bottom: 2rem
+}
+
+.picture {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 0.5px inset #727272;
+  width: 400px;
+  height: auto;
+}
+
+img.pic {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 0.5px inset #727272;
+  max-width: 35vw;
+  height: auto;
+  width: 500px;
+}
+
+.picture-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.drawings-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.picture-caption {
+  text-align: center;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #212121;
+  margin-bottom: 2rem;
+}
+
+.issue-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+}
+
+.issue-picture-container {
+  margin-left: 3rem;
+}
+
+.issue-description {
+  display: flex;
+  width: 50%;
+}
+
+.issue-paragraph {
+  font-family: 'Montserrat';
+  margin: unset
+}
+
+.section-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.section-description {
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer {
+  width: 80%;
+  font-family: monospace;
+  margin: auto;
+  text-align:center;
+  margin-top: 4rem
+}
+
+pre {
+  margin: auto;
+  font-family: monospace;
+  background-color: #212121;
+  border-radius: 25px;
+  color: #F8F6F0;
+  width: max-content
+}
+
+.code-comment {
+  color: gray
+}
+
+.code-selector {
+  color: #50fa7b
+}
+
+.code-property {
+  color: #8be9fd
+}
+
+.code-value {
+  color: #bd93f9
+}
+
+.code-extra {
+  color: #ff79c6
+}
+
+.code-parameter {
+  color: 	#ffb86c
+}
+
+.code-text {
+  color: #f1fa8c
+}
