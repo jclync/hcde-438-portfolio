@@ -6,10 +6,10 @@
   <body>
     <nav class="navbar">
       <ul class="topnav">
-        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
-        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
-        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
-        <li ><a class="right" href="..">Home</a></li>
+        <li ><a class="nav-brand" title="home" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" title="about me" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" title="projects" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" title="home" href="..">Home</a></li>
       </ul>
     </nav>
     <div class="mp0-container">
@@ -21,12 +21,13 @@
         <img
         class="gif"
         src="./images/mp1.gif"
+        alt="curser changer browser extension"
         />
         <p class="gif-caption">Cursor Changer Browser Extension in Action</p>
         <br />
         <p class="paragraph">
           To run this browser extension on your own device, the code can be found in this 
-          <a href="https://github.com/jclync/cursor-extension">github repository</a> called "cursor-extension". The repo can be cloned to your own device after which you can load the extension on the google extensions website.
+          <a title="cursor extension github repo" href="https://github.com/jclync/cursor-extension">github repository</a> called "cursor-extension". The repo can be cloned to your own device after which you can load the extension on the google extensions website.
         </p>
       </div>
       <div class="chunk">
@@ -36,6 +37,7 @@
               <img
               class="picture"
               src="./images/toggle.jpeg"
+              alt="popup with toggle"
               />
               <p class="picture-caption">Popup with toggle</p>
             </div>
@@ -52,6 +54,7 @@
               <img
               class="picture"
               src="./images/toggle-image.jpg"
+              alt="popup with toggle and cursor image"
               />
               <p class="picture-caption">Popup with toggle and new cursor image</p>
             </div>
@@ -67,6 +70,7 @@
               <img
               class="picture"
               src="./images/browser-extension.jpg"
+              alt="browser extension popup with updated icon"
               />
               <p class="picture-caption">Browser extension popup with updated icon</p>
             </div>
@@ -82,6 +86,7 @@
             <img
             class="picture"
             src="./images/mp1.gif"
+            alt="cursor changing with toggle is switched"
             />
             <p class="picture-caption">Cursor changing upon toggle switch</p>
           </div>
@@ -100,7 +105,7 @@
               
 
               <em>* note: full code is in the 
-              <a href="https://github.com/jclync/cursor-extension">repo</a></em>
+              <a title="cursor extension github repo" href="https://github.com/jclync/cursor-extension">repo</a></em>
             </p> 
           </div>
         </div>
@@ -119,6 +124,7 @@
             <img
             class="picture"
             src="./images/toggle-image-error.jpeg"
+            alt="misaligned toggle and icon layout"
             />
             <p class="picture-caption">Misaligned toggle and icon image</p>
           </div>
@@ -130,7 +136,7 @@
             <p class="issue-paragraph">Another issue that I encountered was when I clicked on the toggle, the cursor should have been updated to the new icon. However, the cursor
               did not update to the image, but a 'help' cursor which meant that the image could not be found. Someone else in our class discord also had this problem where the image did not
               change upon toggle switch. I read through the 
-              <a href = "https://developer.chrome.com/docs/extensions/mv3/content_scripts/#files">Chrome Developer docs</a> that Hannah had posted. Following the doc, I called <b>'chrome.runtime.getURL()'</b> to get the <i>absolute URL</i>
+              <a title="chrome developer documentation" href = "https://developer.chrome.com/docs/extensions/mv3/content_scripts/#files">Chrome Developer docs</a> that Hannah had posted. Following the doc, I called <b>'chrome.runtime.getURL()'</b> to get the <i>absolute URL</i>
               of the extension asset (the icon image for the new cursor) and declared the asset as a  Web Accessible Resource in my manifest.json file. 
             </p>
           </div>
@@ -138,6 +144,7 @@
             <img
             class="picture"
             src="./images/icon-help-error.gif"
+            alt="cursor did not update successfully"
             />
             <p class="picture-caption">Cursor did not update correctly</p>
           </div>
@@ -147,7 +154,7 @@
           <div class="issue-description">
             <p class="issue-paragraph"> Upon inspecting the popup, an invalid error message was displayed.
               To resolve this error, I did some research online by looking up the error message "Unchecked runtime.lastError: Icon Invalid". I found a helpful article on 
-              <a href = "https://stackoverflow.com/questions/38457208/chrome-extension-error-unchecked-runtime-lasterror-while-running-browseraction">Stack Overflow</a> that explained
+              <a title="stackoverflow post on runtime error" href = "https://stackoverflow.com/questions/38457208/chrome-extension-error-unchecked-runtime-lasterror-while-running-browseraction">Stack Overflow</a> that explained
               that icon images for extensions need to be specified with size in order to show. So I resized my icon image file to 32x32 px and refreshed my extension, and the cursor successfully
               updated to the new one! I learned that inspecting the popup using the DevTools shows error messages (which are helpful to look at to see where the code has bugs), and there are many resources on Stack Overflow where people have run into the same issues as me.
             </p> 
@@ -156,6 +163,7 @@
             <img
             class="picture"
             src="./images/icon-invalid-error.jpeg"
+            alt="icon invalid error"
             />
             <p class="picture-caption">Icon Invalid Error</p>
           </div>
@@ -175,13 +183,13 @@
       <div class="chunk">
         <h2>Kudos</h2>
         <p class="paragraph">
-          Kudos to these helpful online resources! And special thanks to Hannah and other peers as well :)
+          Kudos to these helpful online resources! And special thanks to Hannah, Raina, and other peers as well :&#41;
         <ul class="ideas-list">
-          <li><a href="https://www.w3schools.com/howto/howto_css_switch.asp">W3 Schools documentation</a> on creating toggle switch</li>
-          <li><a href = "https://github.com/ericyoondotcom/changemycursor/tree/master/mousechrome">github repo</a> from [ericyoondotcom's changemycursor] for inspo</li>
-          <li><a href="https://www.w3schools.com/jsref/prop_style_cursor.asp">W3 Schools documentation</a> on Style cursor Property</li>
-          <li><a href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/#files">Chrome Developer docs</a> on Content Script files and loading secure content</li>
-          <li><a href="https://stackoverflow.com/questions/38457208/chrome-extension-error-unchecked-runtime-lasterror-while-running-browseraction">Stack Overflow post</a> on Icon Invalid error</li>
+          <li><a title="W3 schools documentation on creating a toggle switch" href="https://www.w3schools.com/howto/howto_css_switch.asp">W3 Schools documentation</a> on creating toggle switch</li>
+          <li><a title="change cursor github repo" href = "https://github.com/ericyoondotcom/changemycursor/tree/master/mousechrome">github repo</a> from [ericyoondotcom's changemycursor] for inspo</li>
+          <li><a title="W3 schools documentation on style cursor property" href="https://www.w3schools.com/jsref/prop_style_cursor.asp">W3 Schools documentation</a> on Style cursor Property</li>
+          <li><a title="chrome developer docs on content scripts" href="https://developer.chrome.com/docs/extensions/mv3/content_scripts/#files">Chrome Developer docs</a> on Content Script files and loading secure content</li>
+          <li><a title="stackoverflow post on icon invalid error" href="https://stackoverflow.com/questions/38457208/chrome-extension-error-unchecked-runtime-lasterror-while-running-browseraction">Stack Overflow post</a> on Icon Invalid error</li>
         </ul>
         </p>
       </div>
@@ -189,7 +197,7 @@
         <p>
           <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
           University of Washington<br />
-          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+          <a title="jocelyn's portfolio" href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
         </p>
       </footer>         
     </div>
