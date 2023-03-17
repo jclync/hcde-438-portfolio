@@ -6,10 +6,10 @@
   <body>
     <nav class="navbar">
       <ul class="topnav">
-        <li ><a class="nav-brand" href="..">Jocelyn Chen</a></li>
-        <li ><a class="right" href="../bio/bio.html">About Me</a></li>
-        <li ><a class="active" href="../projects/projects.html">Projects</a></li>
-        <li ><a class="right" href="..">Home</a></li>
+        <li ><a class="nav-brand" title="home" href="..">Jocelyn Chen</a></li>
+        <li ><a class="right" title="about me" href="../bio/bio.html">About Me</a></li>
+        <li ><a class="active" title="projects" href="../projects/projects.html">Projects</a></li>
+        <li ><a class="right" title="home" href="..">Home</a></li>
       </ul>
     </nav>
     <div class="cheatsheet-container">
@@ -21,10 +21,12 @@
           <img
           class="picture"
           src="/mp0/css_transition_color_change.gif"
+          alt="change background color to pink upon mouse hover"
           />
           <img
           class="picture"
           src="/mp0/css_transition_scale.gif"
+          alt="scale picture upon mouse hover"
           />
         </div>
         <div class="content-container">
@@ -39,7 +41,8 @@
       <span class="code-property">color</span><span class="code-extra">:</span> <span class="code-value">#be3455</span>;
     }
     
-    <span class="code-comment">/* on hover, set text color to white and background color to pink in 0.4s */</span>
+    <span class="code-comment">/* on hover, set text color to white</span>
+    <span class="code-comment">and background color to pink in 0.4s */</span>
     <span class="code-selector">.header</span><span class="code-extra">:</span><span class="code-selector">hover</span> {
       <span class="code-property">color</span><span class="code-extra">:</span> <span class="code-value">#F8F6F0</span>;
       <span class="code-property">background-color</span><span class="code-extra">:</span> <span class="code-value">#be3455</span>;
@@ -68,7 +71,7 @@
         <p>
           <b>Web Technologies [HCDE 438, Winter 2023]</b><br />
           University of Washington<br />
-          <a href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
+          <a title="jocelyn's portfolio" href="https://www.jocelynchenjc.com" class="inline">Jocelyn Chen</a>
         </p>
       </footer> 
     </div>        
